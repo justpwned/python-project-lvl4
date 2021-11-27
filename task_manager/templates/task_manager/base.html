@@ -1,4 +1,5 @@
 {% load bootstrap4 %}
+{% load i18n %}
 <!doctype html>
 <html lang="en">
 <head>
@@ -12,7 +13,7 @@
 </head>
 <body class="d-flex flex-column min-vh-100">
     <nav class="navbar navbar-expand-md navbar-light bg-light">
-        <a class="navbar-brand" href="{% url 'index' %}">Task manager</a>
+        <a class="navbar-brand" href="{% url 'index' %}">{% translate "Task manager" %}</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
                 aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -21,7 +22,7 @@
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="">Users</a>
+                    <a class="nav-link" href="">{% translate "Users" %}</a>
                 </li>
 {#                <li class="nav-item">#}
 {#                    <a class="nav-link" href="#">Statuses</a>#}
@@ -83,7 +84,7 @@
 
     <footer class="mt-auto">
         <div class="container border-top py-3">
-            <p>Built by <a href="https://github.com/justpwned">justpwned</a></p>
+            <p><a href="https://github.com/justpwned">{% translate "Source code" %}</a></p>
         </div>
     </footer>
 </body>
