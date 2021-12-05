@@ -1,0 +1,23 @@
+{% extends 'task_manager/base.html' %}
+{% load bootstrap4 %}
+{% block title %}Log In{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h1 class="my-4">Log In</h1>
+        <form method="post">
+            {{ form.non_field_errors }}
+            {% csrf_token %}
+
+            {{ form.username.errors }}
+            <label for="{{ form.username.id_for_label }}">{{ form.username.label }}</label>
+            {{ form.username }}
+
+            {{ form.password.errors }}
+            <label for="{{ form.password.id_for_label }}">{{ form.password.label }}</label>
+            {{ form.password }}
+
+            <button type="submit">Log In</button>
+        </form>
+    </div>
+{% endblock %}
